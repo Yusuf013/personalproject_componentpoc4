@@ -33,7 +33,7 @@ export default function Carousel() {
       }}
     >
       {/* Carousel */}
-      <div className="relative w-full max-w-4xl h-[500px] overflow-visible bg-transparent my-10">
+      <div className="relative w-full max-w-4xl h-[500px] overflow-visible">
         <div className="flex items-center justify-center h-full">
           {images.map((image, index) => (
             <div

@@ -22,15 +22,18 @@ export default function Carousel() {
 
   return (
     <div
-      className="flex items-center justify-center min-h-screen"
+      className="flex flex-col items-center justify-start min-h-screen"
       style={{
-        backgroundImage: "url('/images/Rectangle 1.svg')", // Voeg hier je eigen achtergrondafbeelding toe
+        backgroundImage: "url('/images/Rectangle 1.svg')",
         backgroundSize: "cover",
-        backgroundPosition: "center",
+        backgroundPosition: "top",
+        backgroundRepeat: "no-repeat",
         backgroundColor: "white",
+        fontFamily: "Kalam, sans-serif",
       }}
     >
-      <div className="relative w-full max-w-4xl h-[500px] overflow-visible bg-transparent">
+      {/* Carousel */}
+      <div className="relative w-full max-w-4xl h-[500px] overflow-visible bg-transparent my-10">
         <div className="flex items-center justify-center h-full">
           {images.map((image, index) => (
             <div
@@ -58,13 +61,13 @@ export default function Carousel() {
           ))}
         </div>
 
-        {/* Vervang de knoppen door eigen afbeeldingen */}
+        {/* Navigatieknoppen */}
         <button
           onClick={prevSlide}
           className="absolute -left-40 top-1/2 -translate-y-1/2 z-30"
         >
           <Image
-            src="/images/left.svg" // Voeg je eigen afbeelding toe voor de vorige-knop
+            src="/images/left.svg"
             alt="Previous"
             width={25}
             height={25}
@@ -75,17 +78,71 @@ export default function Carousel() {
           className="absolute -right-40 top-1/2 -translate-y-1/2 z-30"
         >
           <Image
-            src="/images/right.svg" // Voeg je eigen afbeelding toe voor de volgende-knop
+            src="/images/right.svg"
             alt="Next"
             width={25}
             height={25}
           />
         </button>
+      </div>
 
-        <div className="absolute -bottom-10 left-0 right-0 text-center">
-          <h2 className="text-2xl font-bold text-black">SpeelSlim Startpakket</h2>
-          <p className="text-xl text-black">€2,50</p>
+      {/* Productnaam en Prijs */}
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-gray-800">SpeelSlim Startpakket</h2>
+        <p className="text-xl text-gray-700">€2,50</p>
+      </div>
+
+      {/* Productbeschrijving */}
+      <div className="p-8 bg-white/80 rounded-lg shadow-lg w-full max-w-4xl mb-10">
+        <div className="flex justify-end space-x-4 mb-4">
+          {/* Winkelwagen en Favorieten knoppen */}
+          <button className="flex items-center bg-purple-200 text-gray-800 px-4 py-2 rounded-full shadow-md hover:bg-purple-300 transition">
+            <Image
+              src="/images/cart.svg"
+              alt="Winkelwagen"
+              width={20}
+              height={20}
+              className="mr-2"
+            />
+            Winkelwagen
+          </button>
+          <button className="flex items-center bg-gray-200 text-gray-800 px-4 py-2 rounded-full shadow-md hover:bg-gray-300 transition">
+            <Image
+              src="/images/heart.svg"
+              alt="Favorieten"
+              width={20}
+              height={20}
+            />
+          </button>
         </div>
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">
+          Product beschrijving
+        </h1>
+        <p className="text-gray-700 mb-6">
+          Geef jonge ontdekkers een vliegende start met het SpeelSlim
+          Startpakket! Dit zorgvuldig samengestelde pakket zit boordevol
+          kleurrijke materialen en speelse activiteiten om kinderen in groep 1-2
+          kennis te laten maken met de basisvaardigheden. Van letters herkennen
+          tot vormen leren en fijne motoriek ontwikkelen – alles is ontworpen
+          om leren leuk en toegankelijk te maken. Perfect voor thuis, in de
+          klas of als extra oefening!
+        </p>
+        <h2 className="text-xl font-semibold text-gray-800 mb-3">
+          Wat zit erin?
+        </h2>
+        <ul className="list-disc pl-5 text-gray-700">
+          <li>Activiteitenboekjes met uitdagende maar toegankelijke opdrachten</li>
+          <li>Kleurrijke wormpuzzels om logisch denken te stimuleren</li>
+          <li>Flashcards om letters, cijfers en kleuren te oefenen</li>
+          <li>
+            <strong>Bonus:</strong> Een beloningskaartsysteem om motivatie hoog
+            te houden!
+          </li>
+        </ul>
+        <p className="text-gray-700 mt-6">
+          Laat leren een avontuur worden – spelenderwijs groeien en ontdekken
+          met het SpeelSlim Startpakket!
+        </p>
       </div>
     </div>
   );

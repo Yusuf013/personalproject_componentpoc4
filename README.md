@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Caroussel voor producten-pagina
 
-## Getting Started
+Dit is een simpele caroussel voor de hero van mijn productenpagina van mijn personal project
 
-First, run the development server:
+## Inhoud
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overzicht](#overzicht)
+- [Installatie](#installatie)
+- [Gebruik](#gebruik)
+- [Functies](#functies)
+- [Licentie](#licentie)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overzicht
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+De applicatie toont een carousel van productafbeeldingen, samen met productinformatie zoals naam, prijs en een gedetailleerde beschrijving. Gebruikers kunnen door de afbeeldingen bladeren met behulp van navigatieknoppen.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Installatie
 
-## Learn More
+1. **Kloon de repository:**
 
-To learn more about Next.js, take a look at the following resources:
+   ```bash
+   git clone https://github.com/Yusuf013/personalproject_componentpoc4
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **Installeer de afhankelijkheden:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   ```bash
+   npm install
+   ```
 
-## Deploy on Vercel
+3. **Start de ontwikkelserver:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm run dev
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Open de applicatie in uw browser:**
+
+   Ga naar `http://localhost:3000` om de applicatie te bekijken.
+
+## Gebruik
+
+- Gebruik de linker- en rechterknoppen om door de productafbeeldingen te bladeren.
+- Bekijk de productnaam, prijs en beschrijving onder de carousel.
+- Voeg het product toe aan uw winkelwagen of favorieten met de knoppen boven de beschrijving.
+
+## Functies
+
+- **Carousel:** Blader door een reeks productafbeeldingen.
+- **Responsief ontwerp:** Geoptimaliseerd voor verschillende schermformaten.
+- **Interactie:** Voeg producten toe aan winkelwagen of favorieten.
+
